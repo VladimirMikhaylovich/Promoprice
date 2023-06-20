@@ -72,8 +72,7 @@ public class Fact {
         if(type.equals("Promo")){
             Price price = product.getPrice();
             double costOfProduct = price.getStandardPrice()*volume;
-            double promoShare = (totalValuePrice-costOfProduct)*100;
-            return promoShare;
+            return  (costOfProduct/totalValuePrice)*100;
         }
         return 0.0;
     }
